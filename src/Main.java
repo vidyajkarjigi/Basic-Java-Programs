@@ -1,18 +1,27 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
-static int square(int n){
-    return n*n;
- }
- public static void main(String[] args){
-    int number =5;
-    if(number%2==0){
-        System.out.println("Even");
-    }else{
-        System.out.println("Odd");
+class Student3
+{
+    int marks;
+    Student3(int marks)
+    {
+        this.marks=marks;
     }
-    for(int i=1;i<=5;i++){
-        System.out.println(i);
-     }
-    int ans=square(number);
-    System.out.println("Square="+ans);
- }
+
+}
+public class Main
+{
+    static void change(int x, Student3 s)
+    {
+        x=100;
+        s.marks=95;
+        s= new Student3(50);
+
+    }
+    public static void main(String[] args)
+    {
+        int n=20;
+        Student3 st=new Student3(60);
+        change(n,st);
+        System.out.println(n);
+        System.out.println(st.marks);
+    }
+}
